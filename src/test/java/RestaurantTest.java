@@ -93,4 +93,12 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void adding_Sweet_Corn_Soup_and_Veg_Lasagne_to_order_then_cost_should_be_388(){
+        restaurant.addToMenu("Sweet corn soup",119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
+        int billAmount= restaurant.getItemTotal("Sweet corn soup","Vegetable lasagne");
+        assertEquals(388,billAmount);
+    }
 }
