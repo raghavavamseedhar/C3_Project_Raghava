@@ -37,7 +37,7 @@ class RestaurantTest {
 
         mockRestaurant.openingTime= LocalTime.parse("12:30:00");
         LocalTime oneHourAfterOpeningTime = mockRestaurant.openingTime.plusHours(1);
-        Mockito.when(mockRestaurant.getCurrentTime()).thenReturn(oneHourAfterOpeningTime);//Act: returning mock value of current time
+        Mockito.when(mockRestaurant.getCurrentTime()).thenReturn(oneHourAfterOpeningTime);
         assertTrue(mockRestaurant.isRestaurantOpen());
 
     }
