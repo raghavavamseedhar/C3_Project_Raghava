@@ -11,7 +11,7 @@ public class Item {
         return name;
     }
 
-//    public int getPrice() {return price;}
+    public int getPrice() {return price;}
 
     @Override
     public String toString(){
